@@ -1,0 +1,26 @@
+<ivy-module version="2.0">
+  <info organisation="com.wp-digitalexperience" module="distribution"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="distribution" type="tar.gz" />
+  </publications>
+  <dependencies>
+    <dependency org="com.thorstenmarx.webtools" name="webtools-tracker" rev="${webtools.version}" />
+    <dependency org="com.thorstenmarx.webtools" name="webtools-manager" rev="${webtools.version}" />
+    <dependency org="org.eclipse.jetty" name="jetty-distribution" rev="${jetty.version}">
+      <artifact name="jetty-distribution" type="tar.gz" />
+      <!-- m:classifier="opener" -->
+      <exclude module="test-jetty-webapp"/>
+      <exclude module="test-proxy-webapp" />
+      <exclude module="example-async-rest-webapp" />
+      <exclude module="test-jaas-webapp" />
+      <exclude module="test-jndi-webapp" />
+      <exclude module="test-spec-webapp" />
+    </dependency>
+    <dependency org="javax.xml.bind" name="jaxb-api" rev="2.4.0-b180830.0359" />
+    <dependency org="org.glassfish.jaxb" name="jaxb-runtime" rev="2.4.0-b180830.0438" />
+    <dependency org="javax.activation" name="activation" rev="1.1.1" />
+  </dependencies>
+</ivy-module>

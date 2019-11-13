@@ -1,0 +1,210 @@
+webtools-3.3.0 - 12.11.2019
+ [Feature] Improvments and changes for cluster support
+ [Bugfix] Fix startup issue of the ActionSystem
+
+webtools-3.2.0 - 11.10.2019
+ [Bugfix] Fix major clean up issue in ActionSystem
+ [Feature] Extract ActionSystem into core module
+ [Bugfix] Fix user id cookie issue
+
+webtools-3.1.0 - 25.09.2019
+ [Feature] Experimental Cluster Support
+ [Feature] set site only once per segment
+ [Feature] Experimental CacheLayer
+ [Feature] User segmente site configuration to speed up the lucene query
+ [Feature] improve Datalayer to access all data of a type
+
+webtools-3.0.0 - 09.08.2019
+ [Bugfix] Fix tracking via Beacon API
+ [Feature] Add tracking via XMLHttpRequest POST request
+ [Maintenance] refactoring analytics database
+ [Feature] extract tracking application from manager
+ [Feature] Add CoreModules to make the application more extendable
+
+webtools-2.4.1 - 25.04.2018
+ [Bugfix] CategoryRule in Graal Action Scripting fixed
+
+webtools-2.4.0 - 24.04.2018
+ [Feature] ContentStore for event data added
+ [Feature] Dependencies updated
+
+webtools-2.3.0 - 25.01.2018
+ [Feature] Java 11 as minimal required version
+ [Feature] version attribute added to tracked data
+ [Feature] if available the new beacon api (https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API) is used for tracking
+ [Maintenance] ActionSystem was refactored to use rhino for the DSL
+ [Feature] the keyvalue rule of the dsl used for segmentation can handle AND and OR operation now. OR is default.
+ [Maintenance] the saas packages are extracted into a seperate project but currently unmaintained
+ [Feautre] Tracking makes use of LocalStorage
+
+webtools-2.2.0 - 13.06.2018
+ [Feature] Documentation moved to https://thorstenmarx.com/documentation/webtools-manual.html
+ [Feature] Create targeting for first time visitors
+ [Feature] Campaign tracking and targeting based on UTM parameters
+ [Feature] Tracking the referrer and use traffic source for targeting
+
+webtools-2.1.0 - 22.05.2018
+ [Feature] New documentation startet at https://tma.gitbook.io/webtools/
+ [Feature] New scripting support started
+ [Feature] Use maven as build system
+ [Feature] Minor improvments to the segment editor
+ [Feature] Switch to YAML for configuration
+
+webtools-2.0.0 - 08.03.2018
+ [Feature] DataLayer refactoring
+ [Feature] Add remote mariadb configuration
+ [Feature] Add remote mariadb entities
+ [Feature] Add support for dashboard messages
+ [Feature] Introduce new sidebar menu
+ [Update] Store most configuration in configuration module
+ [Update] Entities are not Experimental anymore
+ [Update] Configuration are not Experimental anymore
+
+webtools-1.13.0 - 08.11.2017
+ [Update] Boostrap to v4
+ [Update] UI to materialize design
+
+webtools-1.12.0 - 23.10.2017
+ [Feature] Configuration store for modules (Experimental)
+ [Feature] Migrate from MapDB to BerkeleyDB 
+ [Feature] Entities support for versioning (Experimental)
+ [General] Heartbeat removed
+
+webtools-1.11.2 - 09.10.2017
+ [BUG] NullPointer when tracking event without uuid
+
+webtools-1.11.1 - 08.10.2017
+ [BUG] WordPress plugin can not load list of segments
+
+webtools-1.11.0 - 21.09.2017 
+ [FEATURE] New database layer to store custom data (Experimental)
+ [FEATURE] Add realtime capability to the analytics db
+ [FEATURE] Storage update added
+ [BUG] Error when cancel the segment form
+
+webtools-1.10.1 - 25.07.2017
+ [BUG] Invalid Segment created when using the new segment editor
+
+webtools-1.10.0 - 24.07.2017
+ * [FEATURE] New script based DSL to describe segments
+ * [FEATURE] AND, OR and NOT container for new script based DSL
+ * [FEATURE] ExtensionPoint to add custom segmentation rules to the script based DSL
+
+webtools-1.9.0 - 26.06.2017
+ * [BUG] Site selection issue in segment editor
+ * [FEATURE] Dashboard migrated to d3 and dimple charts
+ * [FEATURE] Add EventSource to the manager and API for extension development
+
+webtools-1.8.0 - 16.06.2017
+ * [FEATURE] New ExtensionPoint, ManagerRestExtension
+
+webtools-1.7.1 - 14.06.2017
+ * [BUG] H2 DataLayer uses too much disk space
+
+Migration Guide:
+The new DataLayer implementation is not compatible to version 1.7.0, all data will be lost.
+
+webtools-1.7.0 - 13.06.2017
+ * Internal index structure refactored
+ * Datalayer introduced
+ * Missing property fixed in segment editor ui
+ * update storage to lucene 6.6.0
+
+Migration Guide to 1.7.0:
+The internal structure was widely reworked, opening a database created with a version prior 1.7.0 should be possible.
+
+webtools-1.6.0 - 05.05.2017
+ * Improved build system
+ * JSON support for REST extensions added
+
+webtools-1.5.3 - 16.3.2017
+ * Add support for elasticsearch
+ * Change used Hash function to SHA3-512 -> migration is required
+
+Migration Guide:
+1. Delete the users.realm file in the webtools/conf directory. A new password will be generated during the next startup. see error.log
+
+webtools-1.4.0 - 16.01.2017
+ * Update dependencies
+ * Add support for cookie domains
+ * Refactoring for cluster support
+ * Reset rules dialogs
+
+webtools-1.3.0 - 08.12.2016
+ * Rename KeyValueRule to UserAgentRule in manager application
+ * Add geo targeting and new LocationRule in manager application; geo targeting is based on GeoLite2 data created by MaxMind
+
+webtools-1.2.0 - 24.11.2016
+ * Refactoring WebToolsModulesContext -> ModuleContext
+ * Add getter for global ExecutorService to ModuleContext
+
+webtools-1.1.0 - 14.11.2016
+ * Remove Lucene dependency from api
+ * New KeyValueRule for Browser, OperatingSystem and Device
+ * Fix Heartbeat issue
+
+webtools-1.0.1 - 17.10.2016
+ * Segments are not stored
+
+webtools-1.0.0 - 13.10.2016
+ * ExtensionPoint to deliver js file via module.
+ * improve segment editor
+ * add documentation
+ * use bootstrap theme
+ * Icons for configuration menu
+
+webtools-0.14.0 - 08.07.2016
+ + UI to change password
+ + UI to regenerate APIKEY
+ + REST Endpoint to get all installed modules
+ + ActionSystem issue fixed: Changes on a segment forces the
+
+webtools-0.13.0 - 27.05.2016
+ + fix bug in segment editor
+ + improve segment editor
+
+webtools-0.12.0 - 03.05.2016
+ + segment editor reworked
+ + rest endpoint to get all segments
+
+webtools-0.11.0 - 12.04.2016
+ + store event source as _source field in the db, 
+	Migration: delete the old analytics db directory
+
+webtools-0.10.0 - 12.04.2016
+ + fix some minor bugs
+ + REST extension improvment
+ 
+webtools-0.9.0 - 24.03.2016
+ + Init extensions on application start
+ + error handling when calling extension rest commands
+
+webtools-0.8.0 - 17 March 2016
+ + ExtensionPoint for REST commands
+ + modules version updated
+ + transactional MetaDataStore added
+ + CacheStore added
+
+webtools-0.7.0 - 09 March 2016
+ + API refactoring
+ + asynchron jquery
+
+webtools-0.6.0 - 15 February 2016
+ + module manager
+
+webtools-0.5.0
+ + unreleased 
+
+webtools-0.4.0 - 03 February 2016
+ + Fix some not serializable issues
+ + Add new EventRule
+ + Tracking via REST
+
+webtools-0.3.0 - 28 January 2016
+ + Fix some not serializable issues
+
+webtools-0.2.0 - 20 January 2016
+ + Fix logging configuration issue
+ 
+webtools-0.1.0 - 20 January 2016
+ + First release

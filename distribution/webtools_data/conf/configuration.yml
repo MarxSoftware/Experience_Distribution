@@ -1,0 +1,9 @@
+mode : local
+data:
+    dir : webtools_data/data
+
+analytics:
+    shards: 3
+
+tracking:
+    url: http://localhost:8080/track

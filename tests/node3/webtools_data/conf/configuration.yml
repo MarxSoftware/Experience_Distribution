@@ -1,0 +1,8 @@
+mode : cluster
+node :
+    name: C
+data:
+    dir : webtools_data/data
+
+analytics:
+    shards: 10

@@ -1,0 +1,33 @@
+webTools-Platform
+=================
+The webTools-Platform is 100% Java event analytics and segmentation platform.
+
+  http://thorstenmarx.com/projects/webtools/
+
+webTools-Platform is open source GNU General Public License 3.
+
+
+RUNNING webTools-Platform
+=========================
+
+$ java -jar start.jar
+
+After the startup the randomly generated admin passwort is logged in the logs/error.log file. The generated admin password
+should be changed after the first start.
+
+
+Logging in the webTools-Platform
+================================
+Use the username admin and the randomly generated passwort.
+Visit http://your_host:8080/manager to access the manger application.
+
+
+Configuration
+=============
+The webTools-Platform is based on Eclipse Jetty. For information to change the port please consult the
+jetty documentation http://www.eclipse.org/jetty/documentation/9.3.14.v20161028/.
+
+Optain source code
+==================
+The current source code is available via the github repository:
+https://github.com/WP-DigitalExperience

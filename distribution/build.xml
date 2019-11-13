@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="distribution" default="distribution" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+	<property name="jetty.version">9.4.22.v20191022</property>
+	<property name="webtools.version">3.3.0</property>
+	<property name="build.folder">build</property>
+	<property name="lib.dir" value="lib"/>
+	<property name="target.folder">${build.folder}/experience-platform-${webtools.version}</property>
+	<property name="jetty.source">${lib.dir}/jetty-distribution-${jetty.version}.tar.gz</property>
+	
+	
+	
+	 <target name="resolve" description="--> retreive dependencies with ivy">
+        <ivy:retrieve/>
+    </target>
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+
+	<target name="distribution" depends="resolve">
+		<echo>Start building distribution</echo>
+		<mkdir dir="build" />
+		<mkdir dir="${target.folder}" />
+		<!--unzip src="${jetty.source}" dest="${build.folder}/temp"/ -->
+		<untar src="${jetty.source}" dest="${build.folder}" compression="gzip"/>
+		<copy todir="${target.folder}">
+			<fileset dir="${build.folder}/jetty-distribution-${jetty.version}"/>
+		</copy>
+
+		<echo>add jaxb</echo>
+		<copy file="${lib.dir}/jaxb-api-2.4.0-b180830.0359.jar" todir="${target.folder}/lib/ext"/>
+		<copy file="${lib.dir}/jaxb-runtime-2.4.0-b180830.0438.jar" todir="${target.folder}/lib/ext"/>
+		<copy file="${lib.dir}/activation-1.1.1.jar" todir="${target.folder}/lib/ext"/>
+
+
+		<echo>patch jetty distribution</echo>
+		<move file="${target.folder}/README.TXT" tofile="${target.folder}/jetty.README.TXT"/>
+		<move file="${target.folder}/VERSION.txt" tofile="${target.folder}/jetty.VERSION.txt"/>
+		<move file="${target.folder}/notice.html" tofile="${target.folder}/jetty.notice.html"/>
+		<echo>add webtools readme, license and version</echo>
+		<copy file="experience-platform.README.txt" todir="${target.folder}" />
+		<copy file="experience-platform.LICENSE.txt" todir="${target.folder}" />
+		<copy file="experience-platform.VERSION.txt" todir="${target.folder}" />
+		<copy file="gpl-3.html" todir="${target.folder}" />
+		<echo>add webtools folder</echo>
+		<copy todir="${target.folder}/webtools_data">
+			<fileset dir="webtools_data"/>
+		</copy>
+		<echo>add modules directory</echo>
+		<copy todir="${target.folder}/webtools_modules">
+			<fileset dir="webtools_modules"/>
+		</copy>
+		<echo>add manager application</echo>
+		<unwar src="${lib.dir}/webtools-manager-${webtools.version}.war" dest="${target.folder}/webapps/root" />
+		<echo>add tracker application</echo>
+		<unwar src="${lib.dir}/webtools-tracker-${webtools.version}.war" dest="${target.folder}/webapps/tracking" />
+		<echo>build tar.gz distribution file</echo>
+		<tar destfile="${build.folder}/experience-platform-${webtools.version}.tar.gz" compression="gzip" basedir="build" includes="experience-platform-${webtools.version}/**"/>
+	</target>
+
+	<target name="tgz">
+		<echo>build tar.gz distribution file</echo>
+		<tar destfile="experience-platform-${webtools.version}.tar.gz" compression="gzip" basedir="build" includes="experience-platform-${webtools.version}/**"/>
+	</target>
+</project>
