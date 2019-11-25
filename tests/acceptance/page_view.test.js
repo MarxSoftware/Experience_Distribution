@@ -2,8 +2,8 @@ const puppeteer = require('puppeteer');
 const unirest = require('unirest');
 
 //const API_KEY = "aullc00kvuh16heludqmj9hcou"
-const API_KEY = "hs4tlev46l5ua5lh02jr207iqs"
-const WEBTOOLS_URL = "http://dev.local:8082"
+const API_KEY = "t2mvrakptcfiak2f4akdvbkilu"
+const WEBTOOLS_URL = "http://dev.local:8080"
 const SEGMENT = {
   name: "home_visitor",
   externalId: 1,
@@ -51,7 +51,8 @@ describe('PageView Rule', () => {
         .send()
         .end(function (response) {
           console.log(JSON.stringify(response.body));
-          expect(response.body.user.actionsSystem).toBe(undefined);
+          let segment = get_segment(response.body.user.actionSystem.segments, 1)
+          expect(segment).toBe(undefined);
           done()
         });
     }, 5000);
@@ -74,9 +75,14 @@ describe('PageView Rule', () => {
         .send()
         .end(function (response) {
           console.log(JSON.stringify(response.body));
-          expect(response.body.user.actionsSystem.segments[0].wpid).toBe(1);
+          let segment = get_segment(response.body.user.actionSystem.segments, 1)
+          expect(segment.wpid).toBe(1);
           done()
         });
     }, 5000);
   });
 })
+
+function get_segment (the_array, segid) {
+  return the_array.find(e => e.wpid == segid);
+}

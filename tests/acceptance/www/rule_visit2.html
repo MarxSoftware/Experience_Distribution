@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Test Score</title>
+
+    <script>
+        document.cookie = "_tma_vid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;domain=dev.local";
+    </script>
+
+    <script type='text/javascript' src='http://dev.local:8080/tracking/js/webtools.js?ver=2.0.0'></script>
+    <script type='text/javascript'>
+        webtools.Tracking.init("http://dev.local:8080", "test_site", "page#score");
+        webtools.Tracking.setCookieDomain("dev.local");
+        webtools.Tracking.customParameters({ "home": false, "front_page": true, "post_type": "page", "slug": "beispiel-seite", "archiv": false });
+        webtools.Tracking.register();
+        
+        var scores = {
+			demo : 50
+		};
+		webtools.Tracking.score(scores);
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write("test")
+    </script>
+
+</body>
+
+</html>
