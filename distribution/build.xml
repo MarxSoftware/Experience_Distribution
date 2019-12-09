@@ -2,7 +2,7 @@
 <project name="distribution" default="distribution" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 	<property name="jetty.version">9.4.24.v20191120</property>
 	<property name="webtools.version">3.3.2</property>
-	<property name="version">3.4.1</property>
+	<property name="version">3.4.2</property>
 	<property name="build.folder">build</property>
 	<property name="lib.dir" value="lib"/>
 	<property name="target.folder">${build.folder}/experience-platform-${version}</property>
