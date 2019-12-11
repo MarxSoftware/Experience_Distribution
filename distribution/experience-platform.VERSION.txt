@@ -1,7 +1,11 @@
-webtools-3.4.2 - 00.12.2019
+webtools-3.5.0 - 11.12.2019
+ [Feature] ECommerce Order Rule 
+ [Feature] Rules for exact match extended
+
+webtools-3.4.2 - 09.12.2019
  [Bugfix] Fix dependency issue in ActionSystem
 
-webtools-3.4.1 - 00.12.2019
+webtools-3.4.1 - 09.12.2019
  [Bugfix] Fix first start issue
 
 webtools-3.4.0 - 08.12.2019
