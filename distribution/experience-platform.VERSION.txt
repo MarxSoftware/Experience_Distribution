@@ -1,3 +1,7 @@
+webtools-3.6.0 - 12.12.2019
+ [Feature] ECommerce Coupon Rule 
+ [Bugfix] Rules with exact matching fixed
+
 webtools-3.5.0 - 11.12.2019
  [Feature] ECommerce Order Rule 
  [Feature] Rules for exact match extended
