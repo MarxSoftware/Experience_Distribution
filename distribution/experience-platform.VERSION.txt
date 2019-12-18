@@ -1,3 +1,6 @@
+webtools-3.7.0 - 18.12.2019
+ [Feature] Add possibilty to generate segment for untracked users, it's mainly relevant for the FirstVisitRule
+
 webtools-3.6.0 - 12.12.2019
  [Feature] ECommerce Coupon Rule 
  [Bugfix] Rules with exact matching fixed
