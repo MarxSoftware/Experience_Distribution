@@ -1,3 +1,9 @@
+webtools-4.0.0 - 26.01.20120
+ [Feature] Use site id for segmente generation
+ [Featuer] Ignore crawler 
+ [Bugfix] Fix extension upload form issue
+ [Feature] Renew Request ID after reload
+
 webtools-3.7.0 - 18.12.2019
  [Feature] Add possibilty to generate segment for untracked users, it's mainly relevant for the FirstVisitRule
 
