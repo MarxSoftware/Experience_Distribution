@@ -3,10 +3,12 @@
 
     <property name="snapshots" value="https://maven.wp-digitalexperience.com/"/>
     <property name="releases" value="https://repo1.maven.org/maven2/"/>
+    <property name="jcenter" value="https://jcenter.bintray.com/" />
     <resolvers>
         <chain name="chain1">
             <ibiblio name="snapshots" m2compatible="true" root="${snapshots}" checkmodified="true" />
             <ibiblio name="releases" m2compatible="true" root="${releases}" checkmodified="true"/>
+            <ibiblio name="jcenter" m2compatible="true" root="${jcenter}" checkmodified="true"/>
         </chain>
 
     </resolvers>

@@ -1,4 +1,8 @@
-webtools-4.0.0 - 26.01.20120
+webtools-4.1.0 - 27.01.2020
+ [Feature] index.html with redirect to manager added
+ [Feature] Custom attributes to audience added
+
+webtools-4.0.0 - 26.01.2020
  [Feature] Use site id for segmente generation
  [Featuer] Ignore crawler 
  [Bugfix] Fix extension upload form issue
