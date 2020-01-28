@@ -4,7 +4,7 @@ webtools-4.1.0 - 27.01.2020
 
 webtools-4.0.0 - 26.01.2020
  [Feature] Use site id for segmente generation
- [Featuer] Ignore crawler 
+ [Feature] Ignore crawler 
  [Bugfix] Fix extension upload form issue
  [Feature] Renew Request ID after reload
 
