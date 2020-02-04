@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="distribution" default="distribution" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
-	<property name="jetty.version">9.4.25.v20191220</property>
+	<property name="jetty.version">9.4.26.v20200117</property>
 	<property name="webtools.version">4.1.0</property>
 	<property name="version">4.1.0</property>
 	<property name="build.folder">build</property>
