@@ -1,10 +1,10 @@
-webTools-Platform
+Experience Platform
 =================
-The webTools-Platform is 100% Java event analytics and segmentation platform.
+The Experience Platform is 100% Java event analytics and segmentation platform.
 
-  http://thorstenmarx.com/projects/webtools/
+  https://wp-digitalexperience.com
 
-webTools-Platform is open source GNU General Public License 3.
+Experience Platform is open source GNU General Public License 3.
 
 
 RUNNING webTools-Platform

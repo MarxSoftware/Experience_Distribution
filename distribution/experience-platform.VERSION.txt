@@ -1,3 +1,6 @@
+webtools-4.2.0 - 06.02.2020
+ [Feature] Add page type to tracking
+
 webtools-4.1.0 - 27.01.2020
  [Feature] index.html with redirect to manager added
  [Feature] Custom attributes to audience added
