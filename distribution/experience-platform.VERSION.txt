@@ -1,3 +1,9 @@
+experience platform 4.3.0 - 02.03.2020
+ [Bugfix] Relogin after login redirects to dashboard now.
+ [Bugfix] The Timestamp field was removed before storing the event. The field now remains.
+ [Maintenance] Dependencies updated.
+ [Feature] Possible to configre API Key per site.
+
 webtools-4.2.0 - 06.02.2020
  [Feature] Add page type to tracking
 
