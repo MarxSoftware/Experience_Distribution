@@ -1,4 +1,6 @@
-experience platform 4.4.0 - xx.xx.xxxx
+experience platform 4.3.1 - 06.03.2020
+ [Bugfix] Single segment was not loadable via REST 
+ [Bugfix] Site API Key feature was not working for all resources
 
 experience platform 4.3.0 - 02.03.2020
  [Bugfix] Relogin after login redirects to dashboard now.
