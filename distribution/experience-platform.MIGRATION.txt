@@ -1,0 +1,31 @@
+Experience Platform migration guide
+===================================
+
+This guide helps you to update to the current version.
+
+if you run into any problems, we will gladly help you: https://forum.wp-digitalexperience.com/
+
+Default steps for a migration
+------------------------------
+An update is usually relatively simple, if further steps are necessary, you will find them further down in the corresponding chapters. 
+
+1. unpack the current version parallel to the existing installation. 
+2. stop the existing installation.
+3. copy the file configuration.yml and users.realm from the folder <exp_old>/webtools_data/config into the new installation.
+4. Copy the data.
+    Data is managed separately by each module. To transfer the data, the folders 
+    <exp_old>/webtools_data/modules/extensions/modules_data
+    <exp_old>/webtools_data/modules/system/modules_data
+    copied or moved to the new installation.
+
+Update 4.3.1 => 5.0.0
+---------------------
+Version 5.0.0 introduces some incompatible changes that result in the fact that not all data can be transferred.
+1. common modules are now system modules. That means you have to copy 
+    <exp_old>/webtools_data/modules/common/modules_data 
+    into <exp_old>/webtools_data/modules/system/modules_data
+2. We introduced a new segment definition language and the old one is not supported any more!
+    Do not copy the folder <exp_old>/webtools_data/modules/common/modules_data/core-module-entities or remove the new folder
+    <exp_old>/webtools_data/modules/system/modules_data/core-module-entities
+3. Restart the Experience Platform
+4. Republish all Audiences in the Experience Manager

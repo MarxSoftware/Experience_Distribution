@@ -1,3 +1,15 @@
+experience-platform 5.0.0 - 19.03.2020
+ [Feature] Incompatible change! We introduced a new segment definition language.
+ [Bug] We had to remove the old segment definition language.
+ [Feature] Deprecated API has been removed.
+ [Feature] The current process id is now written to a file.
+ [Feature] We have introduced a few extension points that are relevant to the hosting that we want to offer.
+ [Feature] Incompatible change! We removed the unused system modules and renamed common modules to system modules.
+ [Feature] It is possible now to filter the segments by site, so that you only see the segments for a single site.
+ [Feature] On internal erros, a custom error page is now used.
+
+See migration guide for informations.
+
 experience platform 4.3.1 - 06.03.2020
  [Bugfix] Single segment was not loadable via REST 
  [Bugfix] Site API Key feature was not working for all resources

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="distribution" default="distribution" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
 	<property name="jetty.version">9.4.27.v20200227</property>
-	<property name="webtools.version">4.3.1</property>
-	<property name="version">4.3.1</property>
+	<property name="webtools.version">5.0.0</property>
+	<property name="version">5.0.0</property>
 	<property name="build.folder">build</property>
 	<property name="lib.dir" value="lib"/>
 	<property name="target.folder">${build.folder}/experience-platform-${version}</property>
@@ -42,6 +42,7 @@
 		<copy file="experience-platform.README.txt" todir="${target.folder}" />
 		<copy file="experience-platform.LICENSE.txt" todir="${target.folder}" />
 		<copy file="experience-platform.VERSION.txt" todir="${target.folder}" />
+		<copy file="experience-platform.MIGRATION.txt" todir="${target.folder}" />
 		<copy file="gpl-3.html" todir="${target.folder}" />
 		<echo>add webtools folder</echo>
 		<copy todir="${target.folder}/webtools_data">
