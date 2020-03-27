@@ -1,3 +1,9 @@
+experience.platform 5.1.0 - 27.03.2020
+ [Bug] Fixed a NullPointer in the entities core module
+ [Feature] Update Modules to 2.6.0 to provide proper extension updates
+ [Maintenance] Update lucene dependency in analytics core module
+ [Maintenance] Update lucene dependency in entities core module 
+
 experience-platform 5.0.0 - 19.03.2020
  [Feature] Incompatible change! We introduced a new segment definition language.
  [Bug] We had to remove the old segment definition language.
