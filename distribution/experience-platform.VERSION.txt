@@ -1,4 +1,8 @@
-experience.platform 5.1.0 - 27.03.2020
+experience-platform-5.1.1 - 15.04.2020
+ [Bug] When creating the segments for a user, segments of other sites were also created.
+ [Maintenance] The DataLayer API has been deprecated and is expected to be removed in the next major release.
+
+experience-platform 5.1.0 - 27.03.2020
  [Bug] Fixed a NullPointer in the entities core module
  [Feature] Update Modules to 2.6.0 to provide proper extension updates
  [Maintenance] Update lucene dependency in analytics core module
