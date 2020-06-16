@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="distribution" default="distribution" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
-	<property name="jetty.version">9.4.28.v20200408</property>
-	<property name="webtools.version">5.1.1</property>
-	<property name="version">5.1.1</property>
+	<property name="jetty.version">9.4.30.v20200611</property>
+	<property name="webtools.version">5.2.4</property>
+	<property name="version">5.2.0</property>
 	<property name="build.folder">build</property>
 	<property name="lib.dir" value="lib"/>
 	<property name="target.folder">${build.folder}/experience-platform-${version}</property>
@@ -56,6 +56,11 @@
 		<unwar src="${lib.dir}/webtools-manager-${webtools.version}.war" dest="${target.folder}/webapps/root" />
 		<echo>add tracker application</echo>
 		<unwar src="${lib.dir}/webtools-tracker-${webtools.version}.war" dest="${target.folder}/webapps/tracking" />
+		<echo>build tar.gz distribution file</echo>
+		<tar destfile="${build.folder}/experience-platform-${version}.tar.gz" compression="gzip" basedir="build" includes="experience-platform-${version}/**"/>
+	</target>
+
+	<target name="package" >
 		<echo>build tar.gz distribution file</echo>
 		<tar destfile="${build.folder}/experience-platform-${version}.tar.gz" compression="gzip" basedir="build" includes="experience-platform-${version}/**"/>
 	</target>

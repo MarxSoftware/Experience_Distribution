@@ -1,3 +1,9 @@
+experience-platform-5.2.0 - 16.06.2020
+ [Feature] Add new percentage of average order value rule
+ [Maintenance] Update Lucene dependency in analytics module
+ [Bug] Logging in modules is now written to the platform log
+ [Maintenance] DataLayer module removed
+
 experience-platform-5.1.1 - 15.04.2020
  [Bug] When creating the segments for a user, segments of other sites were also created.
  [Maintenance] The DataLayer API has been deprecated and is expected to be removed in the next major release.
