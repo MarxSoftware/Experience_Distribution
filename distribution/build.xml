@@ -28,11 +28,13 @@
 			<fileset dir="${build.folder}/jetty-distribution-${jetty.version}"/>
 		</copy>
 
+		<!--
 		<echo>add jaxb</echo>
 		<copy file="${lib.dir}/jaxb-api-2.4.0-b180830.0359.jar" todir="${target.folder}/lib/ext"/>
 		<copy file="${lib.dir}/jaxb-runtime-2.4.0-b180830.0438.jar" todir="${target.folder}/lib/ext"/>
 		<copy file="${lib.dir}/activation-1.1.1.jar" todir="${target.folder}/lib/ext"/>
-
+		<copy file="${lib.dir}/jaxws-rt-2.3.3.jar" todir="${target.folder}/lib/ext"/>
+		-->
 
 		<echo>patch jetty distribution</echo>
 		<move file="${target.folder}/README.TXT" tofile="${target.folder}/jetty.README.TXT"/>
