@@ -1,3 +1,13 @@
+experience-platform-2020.08 - 13.08.2020
+ [Feature] UUID generation refactored
+ [Bug] Fix ID issue in Entities module
+ [Maintenance] Update to Wicket 9
+ [Maintenance] Update to Lucene 8.6.0
+ [Feature] Only track existing sites
+ [Feature] Default value for field category in category rule
+ [Maintenance] Legacy scripting module removed
+ [Maintenance] Introduce new date based version numbering for umbrella project
+
 experience-platform-5.2.0 - 16.06.2020
  [Feature] Add new percentage of average order value rule
  [Maintenance] Update Lucene dependency in analytics module
